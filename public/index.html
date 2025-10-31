@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Cardápio Sorocabanos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cardapio-container">
+        <div class="background-image" style="background: linear-gradient(135deg, #D35400, #E67E22);">
+            <img alt="Background Sorocabanos" class="background-image" src="img/bg-sites.png"/>
+        </div>
+        
+        <div class="content">
+            <div class="header">
+                <!-- Logo via CSS -->
+            </div>
+            
+            <div class="menu-items">
+                <!-- EL TORO BRAVO -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img alt="El Toro Bravo - Espeto de Carne" class="img-espeto" src="img/crn.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">EL TORO BRAVO</h3>
+                            <span class="item-price">R$ 14,00</span>
+                        </div>
+                        <p class="item-description">Suculentos cubos de carne bovina, marinados em especiarias mexicanas, macios e cheios de sabor.</p>
+                        <span class="badge badge-spicy">PICANTE</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="EL TORO BRAVO">-</button>
+                                <span class="quantity-display" data-item="EL TORO BRAVO">0</span>
+                                <button class="quantity-btn plus" data-item="EL TORO BRAVO">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="EL TORO BRAVO" data-price="14.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- POLLO TROPICAL -->
+                <div class="menu-item item-chicken">
+                    <div class="item-image">
+                        <img alt="Polo Tropical - Espeto de Frango" class="img-espeto" src="img/frg.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">POLLO TROPICAL</h3>
+                            <span class="item-price">R$ 12,00</span>
+                        </div>
+                        <p class="item-description">Tentos pedaços de peito de frango, com um toque cítrico e temperos do sol.</p>
+                        <span class="badge badge-spicy">CÍTRICO</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="POLLO TROPICAL">-</button>
+                                <span class="quantity-display" data-item="POLLO TROPICAL">0</span>
+                                <button class="quantity-btn plus" data-item="POLLO TROPICAL">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="POLLO TROPICAL" data-price="12.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CHORIZO CALIENTE -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img alt="Chorizo Caliente - Espeto de Linguiça" class="img-espeto" src="img/lngç.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">CHORIZO CALIENTE</h3>
+                            <span class="item-price">R$ 11,00</span>
+                        </div>
+                        <p class="item-description">Linguiça artesanal com pimenta suave e um defumado irresistível, para acender seu paladar.</p>
+                        <span class="badge badge-spicy">DEFUMADO</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="CHORIZO CALIENTE">-</button>
+                                <span class="quantity-display" data-item="CHORIZO CALIENTE">0</span>
+                                <button class="quantity-btn plus" data-item="CHORIZO CALIENTE">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="CHORIZO CALIENTE" data-price="11.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FIESTA MISTA -->
+                <div class="menu-item item-mixed">
+                    <div class="item-image">
+                        <img alt="Fiesta Mista - Espeto Misto" class="img-espeto" src="img/lngç-queijo.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">FIESTA MISTA</h3>
+                            <span class="item-price">R$ 15,00</span>
+                        </div>
+                        <p class="item-description">A celebração perfeita: carne, frango e linguiça em uma só festa de sabores.</p>
+                        <span class="badge badge-mixed">MISTO</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="FIESTA MISTA">-</button>
+                                <span class="quantity-display" data-item="FIESTA MISTA">0</span>
+                                <button class="quantity-btn plus" data-item="FIESTA MISTA">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="FIESTA MISTA" data-price="15.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- QUESO DEL SOL -->
+                <div class="menu-item item-cheese">
+                    <div class="item-image">
+                        <img alt="Queso del sol - Queijo coalho" class="img-espeto" src="img/queijo.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">QUESO DEL SOL</h3>
+                            <span class="item-price">R$ 10,00</span>
+                        </div>
+                        <p class="item-description">Cubos de queijo coalho grelhados até a perfeição, crocantes por fora e derretendo por dentro.</p>
+                        <span class="badge badge-cheese">QUEIJO COALHO</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="QUESO DEL SOL">-</button>
+                                <span class="quantity-display" data-item="QUESO DEL SOL">0</span>
+                                <button class="quantity-btn plus" data-item="QUESO DEL SOL">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="QUESO DEL SOL" data-price="10.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- JARDÍN SECRETO -->
+                <div class="menu-item item-veg">
+                    <div class="item-image">
+                        <img alt="Jardín Secreto - Vegetariano" class="img-espeto" src="img/crn_lgm.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">JARDÍN SECRETO</h3>
+                            <span class="item-price">R$ 11,00</span>
+                        </div>
+                        <p class="item-description">Uma seleção fresca e colorida de legumes da estação, grelhados e temperados com ervas aromáticas.</p>
+                        <span class="badge badge-veg">VEGETARIANO</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="JARDÍN SECRETO">-</button>
+                                <span class="quantity-display" data-item="JARDÍN SECRETO">0</span>
+                                <button class="quantity-btn plus" data-item="JARDÍN SECRETO">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="JARDÍN SECRETO" data-price="11.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CORAZÓN VALIENTE -->
+                <div class="menu-item item-chicken">
+                    <div class="item-image">
+                        <img alt="Corazón Valiente - Coração de frango" class="img-espeto" src="img/crç.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">CORAZÓN VALIENTE</h3>
+                            <span class="item-price">R$ 12,00</span>
+                        </div>
+                        <p class="item-description">Corações de frango tenros e saborosos, com um tempero secreto que conquista.</p>
+                        <span class="badge badge-spicy">TEMPERO SECRETO</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="CORAZÓN VALIENTE">-</button>
+                                <span class="quantity-display" data-item="CORAZÓN VALIENTE">0</span>
+                                <button class="quantity-btn plus" data-item="CORAZÓN VALIENTE">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="CORAZÓN VALIENTE" data-price="12.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PAN DE AJO PICANTE -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img alt="Pan de ajo Picante - Pão de alho" class="img-espeto" src="img/Pão-alho.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">PAN DE AJO PICANTE</h3>
+                            <span class="item-price">R$ 8,00</span>
+                        </div>
+                        <p class="item-description">Pão crocante com um creme de alho especial e um leve toque picante.</p>
+                        <span class="badge badge-spicy">ACOMPANHAMENTO</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="PAN DE AJO PICANTE">-</button>
+                                <span class="quantity-display" data-item="PAN DE AJO PICANTE">0</span>
+                                <button class="quantity-btn plus" data-item="PAN DE AJO PICANTE">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="PAN DE AJO PICANTE" data-price="8.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- TOCINO DEL DIABLO -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img alt="Tocino del Diablo - Panceta" class="img-espeto" src="img/pnct.png"/>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h3 class="item-name">TOCINO DEL DIABLO</h3>
+                            <span class="item-price">R$ 13,00</span>
+                        </div>
+                        <p class="item-description">Panceta curada e grelhada com tempero secreto mexicano. Crocante, suculento e ousado!</p>
+                        <span class="badge badge-spicy">ACOMPANHAMENTO</span>
+                        <div class="cart-controls">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" data-item="TOCINO DEL DIABLO">-</button>
+                                <span class="quantity-display" data-item="TOCINO DEL DIABLO">0</span>
+                                <button class="quantity-btn plus" data-item="TOCINO DEL DIABLO">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-item="TOCINO DEL DIABLO" data-price="13.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p class="footer-text">🌮 Cada espeto é uma celebração de sabores! 🌮</p>
+                <p class="contact">@sorocabanos_espetaria • (15) 98831-1590</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cart-icon">
+        🛒
+        <span class="cart-count">0</span>
+    </div>
+    
+    <div class="cart-container">
+        <div class="cart-header">
+            <h3 class="cart-title">Seu Pedido</h3>
+            <button class="close-cart">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            Total: R$ <span class="total-value">0,00</span>
+        </div>
+        <button class="checkout-btn">Finalizar Pedido</button>
+    </div>
+    
+    <div class="modal" id="customerModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Informações para Entrega</h3>
+            <div class="form-group">
+                <label for="customerName">Nome</label>
+                <input id="customerName" placeholder="Seu nome completo" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="customerPhone">Telefone</label>
+                <input id="customerPhone" placeholder="(15) 98831-1590" type="tel"/>
+            </div>
+            <div class="form-group">
+                <label for="customerAddress">Endereço</label>
+                <input id="customerAddress" placeholder="Endereço completo para entrega" type="text"/>
+            </div>
+            <div class="loading" id="loadingIndicator">Enviando pedido...</div>
+            <div class="debug-info" id="debugInfo"></div>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel-btn" id="cancelOrder">Cancelar</button>
+                <button class="modal-btn submit-btn" id="submitOrder">Enviar para Notion</button>
+            </div>
+            <button class="whatsapp-option" id="whatsappOption">📱 Enviar via WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = {};
+        let cartTotal = 0;
+
+        const cartIcon = document.querySelector('.cart-icon');
+        const cartContainer = document.querySelector('.cart-container');
+        const closeCartBtn = document.querySelector('.close-cart');
+        const cartItemsContainer = document.querySelector('.cart-items');
+        const totalValueElement = document.querySelector('.total-value');
+        const cartCountElement = document.querySelector('.cart-count');
+        const checkoutBtn = document.querySelector('.checkout-btn');
+        const customerModal = document.getElementById('customerModal');
+        const cancelOrderBtn = document.getElementById('cancelOrder');
+        const submitOrderBtn = document.getElementById('submitOrder');
+        const whatsappOption = document.getElementById('whatsappOption');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const debugInfo = document.getElementById('debugInfo');
+
+        function showDebugInfo(message, type = 'info') {
+            debugInfo.innerHTML = `<strong>${type.toUpperCase()}:</strong> ${message}`;
+            debugInfo.style.display = 'block';
+            debugInfo.style.background = type === 'error' ? '#ffe6e6' : type === 'success' ? '#e6ffe6' : '#f0f8ff';
+            debugInfo.style.borderColor = type === 'error' ? '#ffcccc' : type === 'success' ? '#ccffcc' : '#cce5ff';
+            console.log(`[DEBUG] ${type}: ${message}`);
+        }
+
+        function updateCartDisplay() {
+            const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
+            cartCountElement.textContent = totalItems;
+
+            cartItemsContainer.innerHTML = '';
+            cartTotal = 0;
+
+            Object.keys(cart).forEach(itemName => {
+                const item = cart[itemName];
+                const itemTotal = item.price * item.quantity;
+                cartTotal += itemTotal;
+
+                const cartItemElement = document.createElement('div');
+                cartItemElement.className = 'cart-item';
+                cartItemElement.innerHTML = `
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${itemName}</div>
+                        <div class="cart-item-price">R$ ${item.price.toFixed(2)}</div>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn minus" data-item="${itemName}">-</button>
+                        <span>${item.quantity}</span>
+                        <button class="quantity-btn plus" data-item="${itemName}">+</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+
+            totalValueElement.textContent = cartTotal.toFixed(2).replace('.', ',');
+        }
+
+        function addToCart(itemName, price) {
+            if (cart[itemName]) {
+                cart[itemName].quantity += 1;
+            } else {
+                cart[itemName] = {
+                    price: parseFloat(price),
+                    quantity: 1
+                };
+            }
+            updateCartDisplay();
+            resetQuantityDisplay(itemName);
+        }
+
+        function removeFromCart(itemName) {
+            if (cart[itemName]) {
+                cart[itemName].quantity -= 1;
+                if (cart[itemName].quantity <= 0) {
+                    delete cart[itemName];
+                }
+            }
+            updateCartDisplay();
+            resetQuantityDisplay(itemName);
+        }
+
+        function resetQuantityDisplay(itemName) {
+            const quantityDisplay = document.querySelector(`.quantity-display[data-item="${itemName}"]`);
+            if (quantityDisplay) {
+                quantityDisplay.textContent = '0';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.quantity-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemName = this.getAttribute('data-item');
+                    const quantityDisplay = document.querySelector(`.quantity-display[data-item="${itemName}"]`);
+                    let quantity = parseInt(quantityDisplay.textContent);
+
+                    if (this.classList.contains('plus')) {
+                        quantity++;
+                    } else if (this.classList.contains('minus') && quantity > 0) {
+                        quantity--;
+                    }
+
+                    quantityDisplay.textContent = quantity;
+                });
+            });
+
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemName = this.getAttribute('data-item');
+                    const price = this.getAttribute('data-price');
+                    const quantityDisplay = document.querySelector(`.quantity-display[data-item="${itemName}"]`);
+                    const quantity = parseInt(quantityDisplay.textContent);
+
+                    if (quantity > 0) {
+                        for (let i = 0; i < quantity; i++) {
+                            addToCart(itemName, price);
+                        }
+                    }
+                });
+            });
+
+            cartIcon.addEventListener('click', function() {
+                cartContainer.style.display = 'block';
+            });
+
+            closeCartBtn.addEventListener('click', function() {
+                cartContainer.style.display = 'none';
+            });
+
+            checkoutBtn.addEventListener('click', function() {
+                if (Object.keys(cart).length === 0) {
+                    alert('Seu carrinho está vazio!');
+                    return;
+                }
+                customerModal.style.display = 'flex';
+                debugInfo.style.display = 'none';
+            });
+
+            cancelOrderBtn.addEventListener('click', function() {
+                customerModal.style.display = 'none';
+            });
+
+            submitOrderBtn.addEventListener('click', function() {
+                const customerName = document.getElementById('customerName').value;
+                const customerPhone = document.getElementById('customerPhone').value;
+                const customerAddress = document.getElementById('customerAddress').value;
+
+                if (!customerName || !customerPhone || !customerAddress) {
+                    alert('Por favor, preencha todas as informações!');
+                    return;
+                }
+
+                sendOrderToNotion(customerName, customerPhone, customerAddress);
+            });
+
+            whatsappOption.addEventListener('click', function() {
+                const customerName = document.getElementById('customerName').value;
+                const customerPhone = document.getElementById('customerPhone').value;
+                const customerAddress = document.getElementById('customerAddress').value;
+
+                if (!customerName || !customerPhone || !customerAddress) {
+                    alert('Por favor, preencha todas as informações!');
+                    return;
+                }
+
+                sendOrderToWhatsApp(customerName, customerPhone, customerAddress);
+            });
+
+            cartItemsContainer.addEventListener('click', function(e) {
+                if (e.target.classList.contains('quantity-btn')) {
+                    const itemName = e.target.getAttribute('data-item');
+                    if (e.target.classList.contains('plus')) {
+                        addToCart(itemName, cart[itemName].price);
+                    } else if (e.target.classList.contains('minus')) {
+                        removeFromCart(itemName);
+                    }
+                }
+            });
+        });
+
+        async function sendOrderToNotion(name, phone, address) {
+            loadingIndicator.style.display = 'block';
+            submitOrderBtn.disabled = true;
+            debugInfo.style.display = 'none';
+
+            try {
+                showDebugInfo('Iniciando envio para Notion...', 'info');
+
+                const orderItems = Object.keys(cart).map(itemName => {
+                    const item = cart[itemName];
+                    return `${itemName} (${item.quantity}x) - R$ ${(item.price * item.quantity).toFixed(2)}`;
+                }).join('\n');
+
+                const orderData = {
+                    parent: { 
+                        database_id: '29bba3d8ac0480aba4c0ccfc43b250ba'
+                    },
+                    properties: {
+                        'Nome': {
+                            title: [
+                                {
+                                    text: {
+                                        content: name.substring(0, 2000)
+                                    }
+                                }
+                            ]
+                        },
+                        'Telefone': {
+                            rich_text: [
+                                {
+                                    text: {
+                                        content: phone.substring(0, 2000)
+                                    }
+                                }
+                            ]
+                        },
+                        'Endereço': {
+                            rich_text: [
+                                {
+                                    text: {
+                                        content: address.substring(0, 2000)
+                                    }
+                                }
+                            ]
+                        },
+                        'Itens': {
+                            rich_text: [
+                                {
+                                    text: {
+                                        content: orderItems.substring(0, 2000)
+                                    }
+                                }
+                            ]
+                        },
+                        'Total': {
+                            number: parseFloat(cartTotal.toFixed(2))
+                        },
+                        'Status': {
+                            select: {
+                                name: 'Novo Pedido'
+                            }
+                        }
+                    }
+                };
+
+                const response = await fetch('/.netlify/functions/notion-proxy', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(orderData)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    showDebugInfo('Pedido enviado com sucesso para o Notion!', 'success');
+                    alert('🎉 Pedido enviado com sucesso! Em breve entraremos em contato.');
+                    
+                    cart = {};
+                    updateCartDisplay();
+                    customerModal.style.display = 'none';
+                    
+                    document.getElementById('customerName').value = '';
+                    document.getElementById('customerPhone').value = '';
+                    document.getElementById('customerAddress').value = '';
+                    
+                } else {
+                    const errorText = await response.text();
+                    showDebugInfo(`Erro ${response.status}: ${errorText}`, 'error');
+                    throw new Error(`Erro do servidor: ${response.status}`);
+                }
+
+            } catch (error) {
+                console.error('❌ Erro completo:', error);
+                showDebugInfo(`Erro: ${error.message}`, 'error');
+                
+                const fallback = confirm('⚠️ Não foi possível enviar para o Notion. Deseja enviar via WhatsApp?');
+                if (fallback) {
+                    sendOrderToWhatsApp(name, phone, address);
+                }
+                
+            } finally {
+                loadingIndicator.style.display = 'none';
+                submitOrderBtn.disabled = false;
+            }
+        }
+
+        function sendOrderToWhatsApp(name, phone, address) {
+            const orderItems = Object.keys(cart).map(itemName => {
+                const item = cart[itemName];
+                return `${itemName} (${item.quantity}x) - R$ ${(item.price * item.quantity).toFixed(2)}`;
+            }).join('%0A');
+            
+            const totalFormatado = cartTotal.toFixed(2).replace('.', ',');
+            
+            const mensagem = `*🛵 NOVO PEDIDO - SOROCABANOS*%0A%0A` +
+                            `*📋 Dados do Cliente:*%0A` +
+                            `👤 Nome: ${name}%0A` +
+                            `📞 Telefone: ${phone}%0A` +
+                            `🏠 Endereço: ${address}%0A%0A` +
+                            `*🍢 Itens do Pedido:*%0A${orderItems}%0A%0A` +
+                            `*💰 TOTAL: R$ ${totalFormatado}*%0A%0A` +
+                            `_Pedido gerado via site_`;
+            
+            window.open(`https://wa.me/5515988311590?text=${mensagem}`, '_blank');
+            
+            cart = {};
+            updateCartDisplay();
+            customerModal.style.display = 'none';
+            
+            document.getElementById('customerName').value = '';
+            document.getElementById('customerPhone').value = '';
+            document.getElementById('customerAddress').value = '';
+            
+            alert('✅ Pedido enviado via WhatsApp com sucesso!');
+        }
+
+        showDebugInfo('Sistema carregado. Verifique o console para detalhes.', 'info');
+    </script>
+</body>
+</html>
