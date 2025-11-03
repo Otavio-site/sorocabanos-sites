@@ -455,111 +455,61 @@
         });
 
         async function sendOrderToNotion(name, phone, address) {
-            loadingIndicator.style.display = 'block';
-            submitOrderBtn.disabled = true;
-            debugInfo.style.display = 'none';
+    loadingIndicator.style.display = 'block';
+    submitOrderBtn.disabled = true;
+    debugInfo.style.display = 'none';
 
-            try {
-                showDebugInfo('Iniciando envio para Notion...', 'info');
+    try {
+        showDebugInfo('Enviando pedido para o Notion...', 'info');
 
-                const orderItems = Object.keys(cart).map(itemName => {
-                    const item = cart[itemName];
-                    return `${itemName} (${item.quantity}x) - R$ ${(item.price * item.quantity).toFixed(2)}`;
-                }).join('\n');
+        const orderItems = Object.keys(cart).map(itemName => {
+            const item = cart[itemName];
+            return ${itemName} (${item.quantity}x) - R$ ${(item.price * item.quantity).toFixed(2)};
+        }).join('\n');
 
-                const orderData = {
-                    parent: { 
-                        database_id: '29bba3d8ac0480aba4c0ccfc43b250ba'
-                    },
-                    properties: {
-                        'Nome': {
-                            title: [
-                                {
-                                    text: {
-                                        content: name.substring(0, 2000)
-                                    }
-                                }
-                            ]
-                        },
-                        'Telefone': {
-                            rich_text: [
-                                {
-                                    text: {
-                                        content: phone.substring(0, 2000)
-                                    }
-                                }
-                            ]
-                        },
-                        'Endereço': {
-                            rich_text: [
-                                {
-                                    text: {
-                                        content: address.substring(0, 2000)
-                                    }
-                                }
-                            ]
-                        },
-                        'Itens': {
-                            rich_text: [
-                                {
-                                    text: {
-                                        content: orderItems.substring(0, 2000)
-                                    }
-                                }
-                            ]
-                        },
-                        'Total': {
-                            number: parseFloat(cartTotal.toFixed(2))
-                        },
-                        'Status': {
-                            select: {
-                                name: 'Novo Pedido'
-                            }
-                        }
-                    }
-                };
+        const orderData = {
+            nome: name,
+            telefone: phone,
+            endereco: address,
+            itens: orderItems,
+            total: parseFloat(cartTotal.toFixed(2))
+        };
 
-                const response = await fetch('/.netlify/functions/notion-proxy', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(orderData)
-                });
+        const response = await fetch('/.netlify/functions/enviarParaNotionOtavio', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(orderData)
+        });
 
-                if (response.ok) {
-                    const result = await response.json();
-                    showDebugInfo('Pedido enviado com sucesso para o Notion!', 'success');
-                    alert('🎉 Pedido enviado com sucesso! Em breve entraremos em contato.');
-                    
-                    cart = {};
-                    updateCartDisplay();
-                    customerModal.style.display = 'none';
-                    
-                    document.getElementById('customerName').value = '';
-                    document.getElementById('customerPhone').value = '';
-                    document.getElementById('customerAddress').value = '';
-                    
-                } else {
-                    const errorText = await response.text();
-                    showDebugInfo(`Erro ${response.status}: ${errorText}`, 'error');
-                    throw new Error(`Erro do servidor: ${response.status}`);
-                }
-
-            } catch (error) {
-                console.error('❌ Erro completo:', error);
-                showDebugInfo(`Erro: ${error.message}`, 'error');
-                
-                const fallback = confirm('⚠️ Não foi possível enviar para o Notion. Deseja enviar via WhatsApp?');
-                if (fallback) {
-                    sendOrderToWhatsApp(name, phone, address);
-                }
-                
-            } finally {
-                loadingIndicator.style.display = 'none';
-                submitOrderBtn.disabled = false;
-            }
+        if (!response.ok) {
+            const errorText = await response.text();
+            showDebugInfo(Erro ao enviar: ${errorText}, 'error');
+            throw new Error(Falha no envio para Notion (${response.status}));
         }
+
+        showDebugInfo('Pedido enviado com sucesso para o Notion!', 'success');
+        alert('🎉 Pedido enviado com sucesso! Em breve entraremos em contato.');
+
+        // Limpar tudo após sucesso
+        cart = {};
+        updateCartDisplay();
+        customerModal.style.display = 'none';
+        document.getElementById('customerName').value = '';
+        document.getElementById('customerPhone').value = '';
+        document.getElementById('customerAddress').value = '';
+
+    } catch (error) {
+        console.error('❌ Erro completo:', error);
+        showDebugInfo(Erro: ${error.message}, 'error');
+        const fallback = confirm('⚠️ Não foi possível enviar para o Notion. Deseja enviar via WhatsApp?');
+        if (fallback) {
+            sendOrderToWhatsApp(name, phone, address);
+        }
+    } finally {
+        loadingIndicator.style.display = 'none';
+        submitOrderBtn.disabled = false;
+    }
+}
 
         function sendOrderToWhatsApp(name, phone, address) {
             const orderItems = Object.keys(cart).map(itemName => {
